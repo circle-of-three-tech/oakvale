@@ -34,7 +34,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body { font-family: 'Cormorant Garamond', serif; color: var(--charcoal); background: var(--warm-white); line-height: 1.6; }
 
 /* Ensure all headings use Garamond */
-h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; font-weight: 300 !important;}
 
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -164,7 +164,7 @@ nav {
 @keyframes scrollPulse { 0%, 100% { transform: scaleY(1); opacity: 0.4; } 50% { transform: scaleY(1.3); opacity: 0.8; } }
 
 section { padding: 6rem 8%; max-width: 74%; margin: 0 auto; }
-.section-label { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--gold-light); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.25em; font-family: var(--font-body); text-transform: uppercase; margin-bottom: 1.2rem; }
+.section-label { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--gold-light); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.25em; font-family: var(--font-body); text-transform: uppercase; margin-bottom: 1.2rem; }
 .section-label::before { content: ''; width: 22px; height: 2px; background: var(--forest-mid); }
 .section-title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; color: var(--forest); letter-spacing: -0.01em; }
 .section-title em { font-style: italic; color: var(--gold); }

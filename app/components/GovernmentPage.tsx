@@ -14,7 +14,7 @@ export default function GovernmentPage({ onNavigate }: GovernmentPageProps) {
       <div className="client-hero">
         <div className="client-hero-inner">
           <div className="section-label" style={{ color: 'var(--mint)' }}>For Government Agencies & Departments</div>
-          <h1>National capability. <em>Built to scale. Designed to endure.</em></h1>
+          <h1 className="font-[500]">National capability. <em>Built to scale. Designed to endure.</em></h1>
           <p>Government workforces are the backbone of national development. We partner with ministries and public agencies to build the workforce capability that public service delivery depends on.</p>
         </div>
       </div>
