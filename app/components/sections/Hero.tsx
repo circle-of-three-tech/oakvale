@@ -47,21 +47,27 @@ export default function Hero({ onNavigate }: HeroProps) {
   }, []);
 
   return (
-    <div style={{display:"relative", backgroundImage: 'url(/hero-image2.png)', backgroundColor: 'var(--forest)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'contain', position: 'relative', zIndex: 0}}>
-      {/* <div className="announce">
-        🌍 Now working across 12 African countries &mdash; <a onClick={() => onNavigate('about')}>Learn more about our reach →</a>
-        </div> */}
-        <div className="absolute top-0 left-0 w-full h-full bg-forest bg-opacity-60 z-5"/>
-        <div className="absolute top-0 left-0 w-full h-full hero-grid-overlay z-10" />
+    <div className="relative w-full min-h-screen" style={{
+      backgroundImage: 'url(/hero-image2.png)',
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }}>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-white bg-opacity-80 z-10" />
+      
+      {/* Grid overlay pattern */}
+      <div className="absolute inset-0 hero-grid-overlay z-20" />
 
-        <section className="hero">
+      <section className="hero relative z-30">
         
         <div className="hero-inner">
 
-         <div className="hero-content relative z-20" style={{display: 'relative', zIndex: 20}}>
-          <div className="hero-eyebrow">Workforce . Leadership Development . Organisational Development</div>
+         <div className="hero-content relative z-20" style={{position: 'relative', zIndex: 20}}>
+          <div className="hero-eyebrow">Workforce Solutions | Leadership & Organisational Development</div>
           <h1>
-            Building the health systems Africa {" "}
+            Building the health systems Africa {" "}<br /> 
             <em><span ref={cycleRef}></span></em><br /> 
           </h1>
           <p className="hero-sub">
@@ -71,30 +77,9 @@ export default function Hero({ onNavigate }: HeroProps) {
             <button className="btn-primary" onClick={() => onNavigate('contact')}>Work with us</button>
             <button className="btn-ghost" onClick={() => onNavigate('services')}>Our services</button>
           </div>
-        </div>
-
-        <div className="hero-visual relative z-20">
-          <div className="hero-card-stack">
-            <div className="stat-card">
-              <div className="stat-number">12+</div>
-              <div className="stat-label">African Countries</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">50k+</div>
-              <div className="stat-label">Professionals Trained</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">15+</div>
-              <div className="stat-label">Years of Experience</div>
-            </div>
-            <div className="positioning-pill">
-              High-quality, globally relevant learning. Tailored for African realities.
-            </div>
-          </div>
-        </div>
-
+        </div> 
        </div>
-        <div className="hero-scroll"><div className="scroll-line" />Scroll</div>
+        <div className="hero-scroll animate"><div className="scroll-line" />Scroll</div>
       </section>
     </div>
   );

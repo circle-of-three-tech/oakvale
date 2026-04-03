@@ -11,7 +11,9 @@ export default function Footer({ onNavigate }: FooterProps) {
     <footer>
       <div className="footer-top">
         <div className="footer-brand">
-          <div className="logo">Oakvale <span>Learning</span></div>
+          <div className="logo"><a className="nav-logo" onClick={() => navigate('home')} role="button" tabIndex={0}>
+        <img src="/oakvale-white.svg" className="h-[2rem] w-auto" alt="Oakvale Learning Logo" />
+      </a></div>
           <p>Changing lives through learning and self-discovery. Evidence-based workforce, leadership and organisational development for Africa.</p>
         </div>
         <div className="footer-col">

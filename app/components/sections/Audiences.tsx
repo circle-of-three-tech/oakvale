@@ -10,15 +10,24 @@ interface AudiencesProps {
 
 export default function Audiences({ onNavigate }: AudiencesProps) {
   return (
-    <section className="audiences">
-      <div className="audiences-header">
+    <section className="audiences relative w-full min-h-screen z-0 border-t-[5px] border-gold" style={{
+      backgroundImage: 'url(/female_health_professional.png)',
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'top',
+      backgroundSize: 'cover',
+    }}>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-forest/95 z-10" />
+      
+      <div className="audiences-header relative z-30">
         <div>
           <div className="section-label">Find your fit</div>
           <h2 className="section-title">The same commitment to quality.<br /><em>Designed for your context.</em></h2>
         </div>
         <p className="section-body">The capability challenges facing a fast-growing corporate are different from those facing a government ministry, a development foundation or a university faculty.</p>
       </div>
-      <div className="audiences-grid">
+      <div className="audiences-grid relative z-30">
         <div className="audience-card" onClick={() => onNavigate('corporates')}>
           <div className="audience-icon"><Building size={24} strokeWidth={1.5} /></div>
           <h3 className="audience-title">For Corporates</h3>

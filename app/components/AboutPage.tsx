@@ -42,8 +42,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       <section style={{ background: "var(--cream)", padding: "6rem 8%" }}>
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            display: "flex", 
             gap: "6rem",
             alignItems: "start",
           }}
@@ -85,63 +84,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               </p>
             </div>
           </div>
-          <div>
-            <div className="positioning-statement">
-              <p>
-                High-quality, globally relevant learning, built where the stakes
-                are highest, applied wherever people and organisations need to
-                grow.
-              </p>
-              <div className="attr">Oakvale Learning Positioning Statement</div>
-            </div>
-            <div
-              style={{
-                marginTop: "2rem",
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "1.5rem",
-              }}
-            >
-              {[
-                { num: "12+", lbl: "Countries" },
-                { num: "50k+", lbl: "Learners" },
-                { num: "15+", lbl: "Years Experience" },
-                { num: "100+", lbl: "Programmes" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  style={{
-                    background: "var(--forest)",
-                    borderRadius: "6px",
-                    padding: "1.5rem",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: "Cormorant Garamond, serif",
-                      fontSize: "2.5rem",
-                      fontWeight: 300,
-                      color: "var(--gold-light)",
-                      lineHeight: 1,
-                    }}
-                  >
-                    {s.num}
-                  </div>
-                  <div
-                    style={{
-                      color: "rgba(255,255,255,0.5)",
-                      fontSize: "0.78rem",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.06em",
-                      marginTop: "0.4rem",
-                    }}
-                  >
-                    {s.lbl}
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="w-full bg-forest-mid/10 p-6 rounded-lg" style={{maxWidth: "400px", height: "400px", background: "url(/female_health_professional.png) no-repeat center/cover"}}>
+
           </div>
         </div>
       </section>
@@ -185,7 +129,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               <div className="person-info">
                 <div className="person-name">{p.name}</div>
                 <div className="person-title">{p.title}</div>
-                <div className="person-bio">{p.bio}</div>
+                {/* <div className="person-bio">{p.bio}</div> */}
                 <a className="person-link placeholder">LinkedIn →</a>
               </div>
             </div>
