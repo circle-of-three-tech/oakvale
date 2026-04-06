@@ -13,7 +13,7 @@ export default function DonorsPage({ onNavigate }: DonorsPageProps) {
     <div>
       <div className="client-hero relative w-full" style={{
       backgroundImage: 'url(/donors.png)',
-      backgroundAttachment: 'fixed',
+
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'bottom center',
       backgroundSize: 'cover',

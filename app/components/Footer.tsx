@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 type Page =
   | "home"
@@ -23,9 +24,11 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="footer-brand">
           <div className="logo">
             <Link className="nav-logo" href="/">
-              <img
+              <Image
                 src="/oakvale-white.svg"
-                className="h-[2rem] w-auto"
+                width={120}
+                height={32}
+                style={{ height: '2rem', width: 'auto' }}
                 alt="Oakvale Learning Logo"
               />
             </Link>

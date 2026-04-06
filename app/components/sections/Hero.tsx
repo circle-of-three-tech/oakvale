@@ -47,9 +47,8 @@ export default function Hero({ onNavigate }: HeroProps) {
   }, []);
 
   return (
-    <div className="relative w-full md:min-h-screen" style={{
+    <div className="relative w-full hero-bg" style={{
       backgroundImage: 'url(/hero-image2.png)',
-      backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'cover',

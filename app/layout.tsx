@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   description: "Evidence-based workforce, leadership and organisational development for Africa.",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: {

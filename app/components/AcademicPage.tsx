@@ -13,7 +13,7 @@ export default function AcademicPage({ onNavigate }: AcademicPageProps) {
     <div>
       <div className="client-hero services-hero about-hero relative w-full" style={{
       backgroundImage: 'url(/academic.png)',
-      backgroundAttachment: 'fixed',
+
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'bottom center',
       backgroundSize: 'cover',

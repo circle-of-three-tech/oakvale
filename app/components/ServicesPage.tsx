@@ -103,7 +103,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
     <div className="mt-[2.5rem]">
       <div className="services-hero relative w-full" style={{
       backgroundImage: 'url(/services.png)',
-      backgroundAttachment: 'fixed',
+
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'bottom center',
       backgroundSize: 'cover',

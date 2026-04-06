@@ -130,7 +130,7 @@ nav {
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 70px; width: 100%; max-width: none; }
 .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(37, 102, 68, 0.08) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(200,136,26,0.06) 0%, transparent 50%); pointer-events: none; }
 .hero-grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(133, 150, 130, 0.014) 1px, transparent 1px), linear-gradient(90deg, rgba(81, 107, 79, 0.081) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
-.hero-inner { display: flex; gap: 4rem; max-width: 65%; width: 100%; position: relative; z-index: 2; align-items: center; }
+.hero-inner { display: flex; gap: 4rem; max-width: 65%; width: 100%; position: relative; z-index: 2; align-items: center; padding: 4rem 4%; }
 .hero-content { padding: 0; position: relative; z-index: 2; max-width: 800px;}
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--gold-light); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.8rem; }
 .hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--gold-light); }
@@ -174,7 +174,7 @@ section { padding: 6rem 8%; max-width: 74%; margin: 0 auto; }
 .mission-statement { font-size: 0.95rem; color: var(--mid-grey); line-height: 1.8; max-width: 700px; margin: 0 auto; font-weight: 300; }
 
 .services { background: var(--warm-white); padding: 3rem 0; }
-.services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto; padding: 1rem;}
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--light-grey); border: 2px solid var(--light-grey); border-radius: 8px; overflow: hidden; max-width: 1100px; margin-left: auto; margin-right: auto; margin-top: 2rem; }
 .service-card { background: var(--warm-white); padding: 2.5rem 2rem; transition: background 0.25s; position: relative; cursor: pointer; }
 .service-card:hover { background: var(--cream); }
@@ -281,7 +281,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
 .partner-pill span { font-size: 0.85rem; font-weight: 500; color: var(--charcoal); }
 
 .about-hero { background: var(--forest); padding: 12rem 8% 6rem; color: #fff; width: 100%; max-width: none; }
-.about-hero-inner { max-width: 1100px; margin: 0 auto; }
+.about-hero-inner { max-width: 1100px; margin: 0 auto; padding: 1rem 0; }
 .about-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; }
 .about-hero p { color: rgba(255,255,255,0.65); font-size: 1.05rem; line-height: 1.75; font-weight: 300; }
 
@@ -312,7 +312,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
 .advisor-bio { font-size: 0.8rem; color: var(--mid-grey); line-height: 1.6; font-weight: 300; }
 
 .services-hero { background: var(--forest); padding: 12rem 8% 6rem; color: #fff; width: 100%; max-width: none; }
-.services-hero-inner { max-width: 1100px; margin: 0 auto; }
+.services-hero-inner { max-width: 1100px; margin: 0 auto; padding: 1rem 0; }
 .services-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; }
 .services-hero p { color: rgba(255,255,255,0.65); font-size: 1.05rem; line-height: 1.75; font-weight: 300; }
 .service-detail { padding: 6rem 8%; display: flex; flex-direction: row; justify-content: space-between; gap: 6rem; align-items: start; max-width: 70%; width: 100%; margin: 0 auto; }
@@ -446,7 +446,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
   .nav-links {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -811,7 +811,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
 .form-submit:hover { background: var(--forest-mid); }
 
 .client-hero { background: var(--forest); padding: 11rem 8% 5.5rem; width: 100%; max-width: none; }
-.client-hero-inner { max-width: 1100px; margin: 0 auto; }
+.client-hero-inner { max-width: 1100px; margin: 0 auto; padding: 2.5rem 0;}
 .client-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.4rem,4vw,3.4rem); font-weight:600; color:#fff; line-height:1.15; margin-bottom:1.2rem; }
 .client-hero h1 em { font-style:italic; color:var(--mint); }
 .client-hero p { color:rgba(255,255,255,0.6); font-size:1rem; line-height:1.75; font-weight:300; }
@@ -834,7 +834,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
 .client-services h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,2.4vw,2.1rem); font-weight:600; color:var(--forest); margin-bottom:3rem; line-height:1.2; }
 .client-services h2 em { font-style:italic; color:var(--forest-mid); }
 .client-svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:4rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
-.client-svc-card { background:var(--cream); border-radius:6px; padding:2rem; border-left:3px solid var(--forest-mid); transition:border-color 0.2s; }
+.client-svc-card { background:var(--cream); border-radius:6px; padding:2rem; border-left:3px solid var(--forest-mid); transition:border-color 0.2s; margin-bottom: 1rem; }
 .client-svc-card:hover { border-left-color:var(--gold); }
 .client-svc-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; color:var(--forest); margin-bottom:0.7rem; }
 .client-svc-card p { color:var(--mid-grey); font-size:0.87rem; line-height:1.68; font-weight:300; }
@@ -908,4 +908,196 @@ footer > * { max-width: 1100px; margin: 0 auto; }
 @media (max-width: 600px) {
   .people-grid, .advisory-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr 1fr; }
+}
+/* ============================================
+   MOBILE OPTIMIZATION ADDITIONS
+   ============================================ */
+
+/* Hero background: use fixed only on desktop */
+.hero-bg { background-attachment: scroll; }
+@media (min-width: 769px) {
+  .hero-bg { background-attachment: fixed; }
+}
+
+/* Fix hero-inner max-width on small screens */
+@media (max-width: 1024px) {
+  .hero-inner { max-width: 90%; padding: 2rem 5%; }
+}
+@media (max-width: 768px) {
+  .hero-inner { max-width: 100%; padding: 2rem 4%; gap: 1.5rem; }
+  .hero { min-height: 100svh; } /* Use small viewport height for mobile browsers */
+}
+
+/* Fix section max-width constraint — 74% on mobile = tiny column */
+@media (max-width: 1024px) {
+  section { max-width: none !important; padding: 4rem 5%; }
+}
+@media (max-width: 768px) {
+  section { max-width: none !important; padding: 3rem 4%; }
+}
+
+/* Fix service-detail max-width — 70% crushes content on tablet/mobile */
+@media (max-width: 1100px) {
+  .service-detail { max-width: 100% !important; padding: 4rem 5%; }
+}
+@media (max-width: 768px) {
+  .service-detail { max-width: 100% !important; padding: 3rem 4%; }
+}
+
+/* Fix contact-body max-width */
+@media (max-width: 1024px) {
+  .contact-body { max-width: 100% !important; padding: 4rem 5%; }
+}
+@media (max-width: 768px) {
+  .contact-body { max-width: 100% !important; padding: 3rem 4%; flex-direction: column; }
+  .contact-form { padding: 2rem; } /* was 3rem — too tight on mobile */
+}
+
+/* Fix services-routing max-width constraint */
+@media (max-width: 1024px) {
+  .services-routing > * { max-width: 100% !important; }
+  .routing-intro { max-width: 100% !important; }
+  .routing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .routing-grid { grid-template-columns: 1fr; }
+  .routing-intro { max-width: 100% !important; }
+  .client-hero { padding: 8rem 4% 4rem; }
+  .client-intro { padding: 3rem 4%; }
+  .client-services { padding: 3rem 4%; }
+  .client-services > * { margin: 0 !important; }
+  .services-routing { padding: 3rem 4%; }
+  .services-routing > * { max-width: 100% !important; }
+}
+
+/* Client subnav — adjust sticky top for shorter mobile nav */
+@media (max-width: 768px) {
+  .client-subnav { top: 60px; padding: 0 4%; -webkit-overflow-scrolling: touch; }
+  .client-subnav a { font-size: 0.72rem; padding: 0.8rem 0.9rem; white-space: nowrap; }
+}
+@media (max-width: 480px) {
+  .client-subnav { top: 50px; }
+}
+
+/* Outcomes strip — single column on mobile */
+@media (max-width: 768px) {
+  .outcomes-strip { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
+}
+
+/* Client intro/svc grid */
+@media (max-width: 768px) {
+  .client-intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .client-svc-grid { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* Fix people/advisory grid header alignment on mobile */
+@media (max-width: 768px) {
+  .people > div:first-child, .advisory > div:first-child {
+    text-align: left !important;
+  }
+  .people > * { margin-left: 0 !important; margin-right: 0 !important; max-width: 100% !important; }
+  .advisory > * { margin-left: 0 !important; margin-right: 0 !important; max-width: 100% !important; }
+  .people-grid, .advisory-grid { max-width: 100% !important; margin: 0 !important; }
+}
+
+/* Announce bar on mobile */
+@media (max-width: 768px) {
+  .announce { font-size: 0.75rem; padding: 0.5rem 1rem; flex-wrap: wrap; text-align: center; line-height: 1.4; }
+}
+
+/* Prevent text overflow on narrow screens */
+@media (max-width: 480px) {
+  .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.08em; flex-wrap: wrap; }
+  .positioning-pill { font-size: 0.95rem; padding: 1rem 1.4rem; }
+  .stat-card { padding: 1.2rem; }
+  .stat-number { font-size: 2.2rem; }
+  
+  /* Ensure buttons are always full-width and touchable on very small screens */
+  .btn-primary, .btn-ghost, .btn-primary-dark, .btn-outline-dark {
+    min-height: 44px; /* iOS recommended touch target */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Focus styles for accessibility */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 2px;
+  }
+}
+
+/* Improve touch targets for nav links */
+@media (max-width: 768px) {
+  .nav-links a { min-height: 44px; display: flex; align-items: center; }
+  .nav-hamburger { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+  .dropdown-menu a { min-height: 44px; display: flex; align-items: center; }
+}
+
+/* Prevent horizontal overflow */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* Fix services header on mobile */
+@media (max-width: 768px) {
+  .services-header { max-width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
+  .audiences-header { max-width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
+  .reel-track-wrap { max-width: 100%; }
+}
+
+/* Desktop dropdown: also show when .active class (for touch devices) */
+.nav-dropdown.active .dropdown-menu { display: block; }
+
+/* Fix inner-section containers that have explicit max-width 1100px + auto margin
+   They need to be full-width containers on mobile */
+@media (max-width: 768px) {
+  .services-header,
+  .audiences-header,
+  .services-grid,
+  .audiences-grid,
+  .values-grid,
+  .approach-steps,
+  .people-grid,
+  .advisory-grid,
+  .routing-grid,
+  .outcomes-strip,
+  .client-svc-grid,
+  .client-intro-grid,
+  .reel-track-wrap,
+  .footer-top,
+  .cta-inner,
+  .mission-inner {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* About story section - collapse to single column */
+  section[style] {
+    padding: 3rem 4% !important;
+  }
+
+  /* Make sure hero uses correct viewport height accounting for mobile browser chrome */
+  .hero {
+    min-height: 100svh;
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Fix clients subnav scroll indicator - ensure it doesn't clip text */
+.client-subnav {
+  scrollbar-width: none; /* Firefox */
+}
+.client-subnav::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Hero height: full viewport on desktop, auto on mobile */
+.hero-bg {
+  min-height: 100svh;
+}
+@media (max-width: 768px) {
+  .hero-bg {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
 }

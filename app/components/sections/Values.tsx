@@ -3,7 +3,7 @@
 export default function Values() {
   return (
     <section className="values">
-      <div className="max-w-[60%] mx-auto text-center mb-12">
+      <div className="max-w-[60%] max-[768px]:max-w-full mx-auto text-center mb-12">
         <div className="section-label">What guides us</div>
         <h2 className="section-title">Our Values</h2>
       </div>

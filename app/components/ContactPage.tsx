@@ -14,7 +14,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
     <div className="pt-[2.5rem]">
       <div className="contact-hero pt-10 relative w-full" style={{
       backgroundImage: 'url(/contact.png)',
-      backgroundAttachment: 'fixed',
+
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'cover'

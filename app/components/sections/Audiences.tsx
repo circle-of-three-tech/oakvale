@@ -10,9 +10,9 @@ interface AudiencesProps {
 
 export default function Audiences({ onNavigate }: AudiencesProps) {
   return (
-    <section className="audiences relative bg-forest w-full min-h-screen z-0" style={{
+    <section className="audiences relative bg-forest w-full z-0" style={{
       // backgroundImage: 'url(/female_health_professional.png)',
-      backgroundAttachment: 'fixed',
+
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top',
       backgroundSize: 'cover',

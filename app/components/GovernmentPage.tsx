@@ -13,7 +13,7 @@ export default function GovernmentPage({ onNavigate }: GovernmentPageProps) {
     <div>
       <div className="client-hero relative w-full" style={{
       backgroundImage: 'url(/government.png)',
-      backgroundAttachment: 'fixed',
+
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'bottom center',
       backgroundSize: 'cover',

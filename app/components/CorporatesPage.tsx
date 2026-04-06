@@ -13,7 +13,7 @@ export default function CorporatesPage({ onNavigate }: CorporatesPageProps) {
     <div>
       <div className="client-hero relative w-full" style={{
       backgroundImage: 'url(/corporates.png)',
-      backgroundAttachment: 'fixed',
+
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'bottom center',
       backgroundSize: 'cover',

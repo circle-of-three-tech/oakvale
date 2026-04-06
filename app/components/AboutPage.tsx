@@ -1,6 +1,7 @@
 "use client";
 
 import Footer from "./Footer";
+import Image from "next/image";
 
 type Page =
   | "home"
@@ -21,7 +22,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="mt-[2.5rem]">
       <div className="about-hero relative w-full" style={{
       backgroundImage: 'url(/about-hero.png)',
-      backgroundAttachment: 'fixed',
+
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
@@ -53,11 +54,12 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           className="about-story"
           style={{
             display: "flex", 
-            gap: "6rem",
+            gap: "4rem",
             alignItems: "start",
+            flexWrap: "wrap",
           }}
         >
-          <div>
+          <div style={{ flex: "1 1 320px", minWidth: 0 }}>
             <div className="section-label">Our Story</div>
             <h2 className="section-title">
               Born in health and social care. <em>Built for everywhere.</em>
@@ -94,7 +96,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               </p>
             </div>
           </div>
-          <div className="about-story-image w-full bg-forest-mid/10 p-6 rounded-lg" style={{maxWidth: "400px", height: "400px", background: "url(/female_health_professional.png) no-repeat center/cover"}}>
+          <div className="about-story-image" style={{flex: "0 1 380px", width: "100%", minHeight: "320px", height: "400px", borderRadius: "8px", background: "url(/female_health_professional.png) no-repeat center/cover"}}>
 
           </div>
         </div>
@@ -130,9 +132,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           ].map((p, i) => (
             <div className="person-card" key={i}>
               <div className="person-photo">
-                <img
+                <Image
                   src="https://plus.unsplash.com/premium_photo-1745624797647-37ddb5c77b65?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="photo"
+                  fill
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className="person-photo-label">Photo Coming Soon</div>
               </div>
@@ -174,15 +178,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           ].map((a, i) => (
             <div className="advisor-card" key={i}>
               <div className="advisor-photo">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1613876215075-276fd62c89a4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt={`${a.name} photo`}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "6px",
-                  }}
+                  fill
+                  style={{ objectFit: 'cover', borderRadius: '6px' }}
                 />
                 {/* <div className="advisor-photo-label">Photo Coming Soon</div> */}
               </div>

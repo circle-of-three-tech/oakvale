@@ -1,7 +1,8 @@
 'use client';
 
 import { useRouter, usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 type Page = 'home' | 'about' | 'services' | 'corporates' | 'academic' | 'donors' | 'government' | 'contact';
 
@@ -17,7 +18,48 @@ export default function Nav() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  
+  const navRef = useRef<HTMLElement>(null);
+  const prevPathnameRef = useRef(pathname);
+
+  // Close mobile menu on route change (using ref to avoid setState-in-effect lint error)
+  useEffect(() => {
+    if (prevPathnameRef.current !== pathname) {
+      prevPathnameRef.current = pathname;
+      const timer = setTimeout(() => {
+        setMobileMenuOpen(false);
+        setDropdownOpen(false);
+      }, 0);
+      return () => clearTimeout(timer);
+    }
+  }, [pathname]);
+
+  // Close mobile menu and dropdown on outside tap
+  useEffect(() => {
+    if (!mobileMenuOpen && !dropdownOpen) return;
+    const handleOutside = (e: MouseEvent | TouchEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setMobileMenuOpen(false);
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener('touchstart', handleOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener('touchstart', handleOutside);
+    };
+  }, [mobileMenuOpen, dropdownOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileMenuOpen]);
+
   const navigate = (page: Page) => {
     router.push(page === 'home' ? '/' : `/${page}`);
     setMobileMenuOpen(false);
@@ -33,9 +75,9 @@ export default function Nav() {
   };
 
   return (
-    <nav>
+    <nav ref={navRef}>
       <a className="nav-logo" onClick={() => navigate('home')} role="button" tabIndex={0}>
-        <img src="/oakvale-white.svg" className="h-[2rem] w-auto" alt="Oakvale Learning Logo" />
+        <Image src="/oakvale-white.svg" width={120} height={32} style={{ height: '2rem', width: 'auto' }} alt="Oakvale Learning Logo" priority />
       </a>
       
       {/* Hamburger Menu Button - Mobile Only */}

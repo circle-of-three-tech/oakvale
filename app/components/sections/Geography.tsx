@@ -3,10 +3,10 @@
 export default function Geography() {
   return (
     <section
-      className="geography relative w-full min-h-screen"
+      className="geography relative w-full"
       style={{
         backgroundImage: "url(/map.png)",
-        backgroundAttachment: "fixed",
+
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "contain",
