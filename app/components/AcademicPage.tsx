@@ -11,7 +11,7 @@ interface AcademicPageProps {
 export default function AcademicPage({ onNavigate }: AcademicPageProps) {
   return (
     <div>
-      <div className="min-h-[40vh] flex items-end relative w-full" style={{
+      <div className="client-hero sm:min-h-[40vh] md:min-h-[50vh] flex items-center relative w-full" style={{
       backgroundImage: 'url(/academic.png)',
 
       backgroundRepeat: 'no-repeat',
@@ -21,7 +21,7 @@ export default function AcademicPage({ onNavigate }: AcademicPageProps) {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-70 z-5" />
       
-        <div className="client-hero-inner relative z-10">
+        <div className="relative z-10 m-w-[60%] mx-auto py-10">
           <div className="section-label" style={{ color: 'var(--mint)' }}>For Academic Institutions</div>
           <h1>Curriculum that is <br/><em>globally benchmarked and locally relevant.</em></h1>
           <p>African universities and colleges face a dual mandate: meet international academic standards while equipping graduates <br/>for the realities of African labour markets. We help you do both.</p>

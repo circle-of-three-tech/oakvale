@@ -903,6 +903,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
   nav .nav-links { display: none; }
   .routing-grid, .client-intro-grid, .client-svc-grid, .outcomes-strip { grid-template-columns: 1fr; }
   .client-subnav { overflow-x: auto; flex-wrap: nowrap; }
+.client-hero-inner { max-width: 80%; }
   .people-grid, .advisory-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {

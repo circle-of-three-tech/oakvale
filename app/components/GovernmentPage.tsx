@@ -11,7 +11,7 @@ interface GovernmentPageProps {
 export default function GovernmentPage({ onNavigate }: GovernmentPageProps) {
   return (
     <div>
-      <div className="client-hero relative min-h-[40vh] flex items-end" style={{
+      <div className="client-hero relative sm:min-h-[40vh] md:min-h-[50vh] flex items-center" style={{
       backgroundImage: 'url(/government.png)',
 
       backgroundRepeat: 'no-repeat',
@@ -21,7 +21,7 @@ export default function GovernmentPage({ onNavigate }: GovernmentPageProps) {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-70 z-5" />
       
-        <div className="client-hero-inner relative z-10">
+        <div className="relative z-10 m-w-[60%] mx-auto py-10">
           <div className="section-label" style={{ color: 'var(--mint)' }}>For Government Agencies & Departments</div>
           <h1 className="font-[500]">National capability.  <em>Competence at scale.</em></h1>
           <p>Government workforces are the backbone of national development. We partner with ministries and public agencies to build the workforce capability that public service delivery depends on.</p>

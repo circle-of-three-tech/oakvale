@@ -11,7 +11,7 @@ interface DonorsPageProps {
 export default function DonorsPage({ onNavigate }: DonorsPageProps) {
   return (
     <div>
-      <div className="client-hero relative w-full min-h-[40vh] flex items-end" style={{
+      <div className="client-hero sm:min-h-[40vh] md:min-h-[50vh] flex items-center relative w-full" style={{
       backgroundImage: 'url(/donors.png)',
 
       backgroundRepeat: 'no-repeat',
@@ -21,7 +21,7 @@ export default function DonorsPage({ onNavigate }: DonorsPageProps) {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-70 z-5" />
       
-        <div className="client-hero-inner relative z-10">
+        <div className="relative z-10 m-w-[60%] mx-auto py-10">
           <div className="section-label" style={{ color: 'var(--mint)' }}>For Donor Agencies & Implementing Partners</div>
           <h1>Workforce development that <em>delivers results.</em></h1>
           <p>Grant-funded workforce programmes face a dual obligation: deliver real impact for beneficiaries, and demonstrate that impact convincingly to funders. We design programmes that do both.</p>

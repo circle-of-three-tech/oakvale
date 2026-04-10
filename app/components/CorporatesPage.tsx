@@ -10,8 +10,8 @@ interface CorporatesPageProps {
 
 export default function CorporatesPage({ onNavigate }: CorporatesPageProps) {
   return (
-    <div className="py-[2rem] min-h-[30vh]">
-      <div className="client-hero relative w-full" style={{
+    <div className="py-[2rem]">
+      <div className="client-hero relative w-full sm:min-h-[40vh] md:min-h-[50vh] flex items-center" style={{
       backgroundImage: 'url(/corporates.png)',
 
       backgroundRepeat: 'no-repeat',
@@ -21,7 +21,7 @@ export default function CorporatesPage({ onNavigate }: CorporatesPageProps) {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-70 z-5" />
       
-        <div className="client-hero-inner relative z-10">
+        <div className="relative z-10 m-w-[60%] mx-auto py-10">
           <div className="section-label" style={{ color: 'var(--mint)' }}>For Corporates</div>
           <h1>Building capability from <em>the inside out.</em></h1>
           <p>Fast-growing organisations across Africa face a common challenge: the workforce needed to deliver on strategic ambition often does not yet exist. <br/>We help you build it from frontline skills to senior leadership.</p>
@@ -29,7 +29,7 @@ export default function CorporatesPage({ onNavigate }: CorporatesPageProps) {
       </div>
 
       <nav className="client-subnav">
-        <a className="active">Overview</a>
+        <a className="active">Corporates</a>
         <a onClick={() => onNavigate('academic')}>Academic Institutions</a>
         <a onClick={() => onNavigate('donors')}>Donor Agencies</a>
         <a onClick={() => onNavigate('government')}>Government</a>
