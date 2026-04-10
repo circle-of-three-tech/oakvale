@@ -35,7 +35,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             About Oakvale Learning
           </div>
           <h1>
-            We exist to change lives through{" "}
+            We exist to change lives through{" "}<br/>
             <em style={{ fontStyle: "italic", color: "var(--mint)" }}>
               learning and self-discovery.
             </em>
@@ -62,7 +62,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           <div style={{ flex: "1 1 320px", minWidth: 0 }}>
             <div className="section-label">Our Story</div>
             <h2 className="section-title">
-              Born in health and social care. <em>Built for everywhere.</em>
+              Born in health and social care. <br/> <em>Built for everywhere.</em>
             </h2>
             <div
               style={{
@@ -96,8 +96,15 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               </p>
             </div>
           </div>
-          <div className="about-story-image" style={{flex: "0 1 380px", width: "100%", minHeight: "320px", height: "400px", borderRadius: "8px", background: "url(/female_health_professional.png) no-repeat center/cover"}}>
-
+          <div 
+          className="about-story-image" 
+          style={{
+            flex: "0 1 380px", 
+            width: "100%", 
+            minHeight: "640px", 
+            height: "100%", 
+            // borderRadius: "8px", 
+            background: "url(/logo_dark.png) no-repeat left/cover"}}>
           </div>
         </div>
       </section>
