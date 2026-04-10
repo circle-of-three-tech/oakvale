@@ -102,7 +102,7 @@ export default function Nav() {
             tabIndex={0}
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
-            Contact Us
+            Who We Work With
           </a>
           <div className="dropdown-menu">
             {clientPages.map((item) => (
@@ -110,7 +110,7 @@ export default function Nav() {
             ))}
           </div>
         </li>
-        <li><a className={`nav-cta ${isActive('contact') ? 'active' : ''}`} onClick={() => navigate('contact')} role="button" tabIndex={0}>Work With Us</a></li>
+        <li><a className={`nav-cta ${isActive('contact') ? 'active' : ''}`} onClick={() => navigate('contact')} role="button" tabIndex={0}>Contact Us</a></li>
       </ul>
     </nav>
   );

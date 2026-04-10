@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Footer from './Footer';
 
 type Page = 'home' | 'about' | 'services' | 'corporates' | 'academic' | 'donors' | 'government' | 'contact';
@@ -108,9 +109,18 @@ export default function AcademicPage({ onNavigate }: AcademicPageProps) {
         <div className="cta-inner">
           <h2>Developing your academic programmes?</h2>
           <p>Whether you are reviewing an existing programme or developing something new, we would welcome the conversation.</p>
-          <div className="cta-actions">
-            <button className="btn-primary-dark" onClick={() => onNavigate('contact')}>Get in touch</button>
-            <button className="btn-outline-dark" onClick={() => onNavigate('services')}>See all services</button>
+           <div className="cta-actions">
+            
+            <Link
+              href="https://learn.oakvaleltd.com"  
+            >
+              <button
+                className="btn-primary-dark"
+                onClick={() => onNavigate("services")}
+              >
+                Train Your Care Workforce
+              </button>
+            </Link>
           </div>
         </div>
       </div>

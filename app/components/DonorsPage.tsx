@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Footer from './Footer';
 
 type Page = 'home' | 'about' | 'services' | 'corporates' | 'academic' | 'donors' | 'government' | 'contact';
@@ -108,9 +109,25 @@ export default function DonorsPage({ onNavigate }: DonorsPageProps) {
         <div className="cta-inner">
           <h2>Working on a workforce development programme?</h2>
           <p>Whether you are designing a new programme, reviewing an existing one, or looking for a delivery partner for a funding bid, we would welcome the conversation.</p>
-          <div className="cta-actions">
-            <button className="btn-primary-dark" onClick={() => onNavigate('contact')}>Get in touch</button>
-            <button className="btn-outline-dark" onClick={() => onNavigate('services')}>See all services</button>
+           <div className="cta-actions">
+            <Link href="https://jobs.oakvaleltd.com" >
+            <button 
+            className="btn-primary-dark"
+              onClick={() => onNavigate("contact")}
+              >
+             Hire Certified Care Staff
+            </button>
+              </Link>
+            <Link
+              href="https://learn.oakvaleltd.com"  
+            >
+              <button
+                className="btn-outline-dark"
+                onClick={() => onNavigate("services")}
+              >
+                Train Your Care Workforce
+              </button>
+            </Link>
           </div>
         </div>
       </div>
