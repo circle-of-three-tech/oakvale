@@ -104,7 +104,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             minHeight: "640px", 
             height: "100%", 
             // borderRadius: "8px", 
-            background: "url(/logo_dark.png) no-repeat left/cover"}}>
+            // background: "url(/logo_dark.png) no-repeat left/cover"
+            }}>
           </div>
         </div>
       </section>
