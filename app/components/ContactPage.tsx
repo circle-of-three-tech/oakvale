@@ -1,5 +1,6 @@
 'use client';
-
+ 
+import { useState } from 'react';
 import Footer from './Footer';
 import { Mail, MapPin, Globe } from 'lucide-react';
   
@@ -10,6 +11,39 @@ interface ContactPageProps {
 }
 
 export default function ContactPage({ onNavigate }: ContactPageProps) {
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmission = async(e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting) return; // Prevent multiple submissions
+    setIsSubmitting(true);
+
+    try {
+      await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: (e.target as HTMLFormElement).firstName.value,
+          lastName: (e.target as HTMLFormElement).lastName.value,
+          organisation: (e.target as HTMLFormElement).organisation.value,
+          email: (e.target as HTMLFormElement).email.value,
+          enquiryType: (e.target as HTMLFormElement).enquiryType.value,
+          message: (e.target as HTMLFormElement).message.value,
+        }),
+      });
+      alert('Your enquiry has been sent. We will follow up within 3 working days.');
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      console.error('Error sending enquiry:', error);
+      alert('There was an error sending your enquiry. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return ( 
     <div className="pt-[2.5rem]">
       <div className="contact-hero pt-10 relative w-full" style={{
@@ -49,31 +83,33 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
         <div className="contact-form">
           <h3>Send us a message</h3>
           <p>Tell us about your organisation and what you are working on. We will follow up within 3 working days.</p>
-          <div className="form-row">
-            <div className="form-group"><label>First Name</label><input type="text" placeholder="Your first name" /></div>
-            <div className="form-group"><label>Last Name</label><input type="text" placeholder="Your last name" /></div>
-          </div>
-          <div className="form-group"><label>Organisation</label><input type="text" placeholder="Your organisation name" /></div>
-          <div className="form-group"><label>Email Address</label><input type="email" placeholder="your@organisation.org" /></div>
-          <div className="form-group">
-            <label>Type of Enquiry</label>
-            <select>
-              <option value="">Select enquiry type...</option>
-              <option>Workforce Development Programme</option>
-              <option>Organisational &amp; Leadership Development</option>
-              <option>Academic Curriculum Co-Development</option>
-              <option>Technology-Enabled Learning</option>
-              <option>Proposal Partnership / Joint Bid</option>
-              <option>Government / Public Sector Enquiry</option>
-              <option>General Partnership Enquiry</option>
-            </select>
-          </div>
-          <div className="form-group"><label>Tell us about your project</label><textarea placeholder="Briefly describe your organisation, the challenge you are working on, and what kind of support you are looking for..." /></div>
-          <button className="form-submit">Send Enquiry</button>
+          <form onSubmit={handleSubmission}>
+            <div className="form-row">
+              <div className="form-group"><label>First Name</label><input type="text" name="firstName" placeholder="Your first name" required /></div>
+              <div className="form-group"><label>Last Name</label><input type="text" name="lastName" placeholder="Your last name" required /></div>
+            </div>
+            <div className="form-group"><label>Organisation</label><input type="text" name="organisation" placeholder="Your organisation name" required /></div>
+            <div className="form-group"><label>Email Address</label><input type="email" name="email" placeholder="your@organisation.org" required /></div>
+            <div className="form-group">
+              <label>Type of Enquiry</label>
+              <select name="enquiryType" required>
+                <option value="">Select enquiry type...</option>
+                <option value="Workforce Development Programme">Workforce Development Programme</option>
+                <option value="Organisational & Leadership Development">Organisational &amp; Leadership Development</option>
+                <option value="Academic Curriculum Co-Development">Academic Curriculum Co-Development</option>
+                <option value="Technology-Enabled Learning">Technology-Enabled Learning</option>
+                <option value="Proposal Partnership / Joint Bid">Proposal Partnership / Joint Bid</option>
+                <option value="Government / Public Sector Enquiry">Government / Public Sector Enquiry</option>
+                <option value="General Partnership Enquiry">General Partnership Enquiry</option>
+              </select>
+            </div>
+            <div className="form-group"><label>Tell us about your project</label><textarea name="message" placeholder="Briefly describe your organisation, the challenge you are working on, and what kind of support you are looking for..." required /></div>
+            <button type="submit" className="form-submit" disabled={isSubmitting}>{isSubmitting ? 'Sending...' : 'Send Enquiry'}</button>
+          </form>
         </div>
       </div>
 
       <Footer onNavigate={onNavigate} />
     </div>
   );
-}
+  }
