@@ -97,7 +97,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               career pathways across Africa.
             </p>
             <div className="hero-actions">
-              <Link target="_blank" href="https://learn.oakvalelearning.com">
+              <Link target="_blank" href="https://learn.oakvaleltd.com">
                 <button className="btn-primary">
                   Train Your Care Workforce
                 </button>
