@@ -1,6 +1,7 @@
 'use client';
  
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import Footer from './Footer';
 import { Mail, MapPin, Globe } from 'lucide-react';
   
@@ -16,11 +17,13 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
 
   const handleSubmission = async(e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (isSubmitting) return; // Prevent multiple submissions
+    if (isSubmitting) return;
     setIsSubmitting(true);
 
+    const loadingToast = toast.loading('Sending your enquiry...');
+
     try {
-      await fetch('/api/send-email', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,11 +37,24 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
           message: (e.target as HTMLFormElement).message.value,
         }),
       });
-      alert('Your enquiry has been sent. We will get back to your soon.');
-      (e.target as HTMLFormElement).reset();
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        toast.success('Your enquiry has been sent! We will get back to you within 3 working days.', {
+          id: loadingToast,
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        toast.error(data.error || 'Failed to send enquiry. Please try again.', {
+          id: loadingToast,
+        });
+      }
     } catch (error) {
       console.error('Error sending enquiry:', error);
-      alert('There was an error sending your enquiry. Please try again later.');
+      toast.error('There was an error sending your enquiry. Please try again later.', {
+        id: loadingToast,
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -46,6 +62,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
 
   return ( 
     <div className="pt-[2.5rem]">
+      <Toaster position="top-right" />
       <div className="contact-hero pt-10 relative w-full" style={{
       backgroundImage: 'url(/contact.png)',
 
