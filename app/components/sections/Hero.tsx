@@ -96,13 +96,13 @@ export default function Hero({ onNavigate }: HeroProps) {
               build capability, raise professional standards and create genuine
               career pathways across Africa.
             </p>
-            <div className="hero-actions  w-full md:w-auto">
-              <Link target="_blank" href="https://learn.oakvaleltd.com" className="w-full">
+            <div className="hero-actions flex w-full md:w-auto">
+              <Link target="_blank" href="https://learn.oakvaleltd.com" className="w-fit">
                 <button className="btn-primary w-full md:w-auto">
                   Train Your Care Workforce
                 </button>
               </Link>
-              <Link target="_blank" href="https://jobs.oakvaleltd.com" className="w-full">
+              <Link target="_blank" href="https://jobs.oakvaleltd.com" className="w-fit">
                 <button className="btn-ghost w-full md:w-auto">Hire Certified Care Staff</button>
               </Link>
             </div>
