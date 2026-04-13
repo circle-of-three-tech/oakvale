@@ -120,39 +120,64 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="people-grid">
           {[
             {
-              initials: "OL",
-              name: "Founder & CEO",
+              initials: "FO",
+              name: "Funke Onamusi",
               title: "Founder & Chief Executive",
+              image: '/team/Dr Funke.png',
               bio: "Over 15 years leading workforce development programmes across Africa, with deep expertise in health systems strengthening and large-scale skills programmes.",
             },
             {
-              initials: "OL",
-              name: "Director of Programmes",
-              title: "Director of Programmes",
-              bio: "Specialist in curriculum design and organisational learning, with a background spanning university education and corporate L&D across West and East Africa.",
+              initials: "SD",
+              name: "Sitasri De",
+              title: "Operations Lead",
+               image: '/team/Sitasri.png',
+              bio: "",
             },
             {
-              initials: "OL",
-              name: "Head of Technology",
-              title: "Head of Technology & Digital Learning",
-              bio: "Expert in digital learning infrastructure and content development, with a focus on low-bandwidth solutions for dispersed workforces.",
+              initials: "CA",
+              name: "Caleb Adejoh",
+              title: "Project Coordinator",
+               image: '/team/Caleb.png',
+              bio: "",
             },
+             {
+              initials: "TA",
+              name: "Timothy Ameloko",
+              title: "Instructional Design",
+               image: '/team/Timothy.png',
+              bio: "",
+            },
+             {
+              initials: "YB",
+              name: "Dr Yinka Badmus ",
+              title: "Subject Matter Expert (SME)",
+               image: '/team/Dr Yinka.png',
+              bio: "",
+            },
+             {
+              initials: "SA",
+              name: "Dr Sarah Adekoya ",
+              title: "Quality Assurance Lead",
+               image: '/team/Dr Sarah.png',
+              bio: "",
+            }
           ].map((p, i) => (
             <div className="person-card" key={i}>
               <div className="person-photo">
                 <Image
-                  src="https://plus.unsplash.com/premium_photo-1745624797647-37ddb5c77b65?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  // src="https://plus.unsplash.com/premium_photo-1745624797647-37ddb5c77b65?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src={p.image || ""}
                   alt="photo"
                   fill
                   style={{ objectFit: 'cover' }}
                 />
-                <div className="person-photo-label">Photo Coming Soon</div>
+                {/* <div className="person-photo-label">Photo Coming Soon</div> */}
               </div>
               <div className="person-info">
                 <div className="person-name">{p.name}</div>
                 <div className="person-title">{p.title}</div>
                 {/* <div className="person-bio">{p.bio}</div> */}
-                <a className="person-link placeholder">LinkedIn →</a>
+                {/* <a className="person-link placeholder">LinkedIn →</a> */}
               </div>
             </div>
           ))}
@@ -166,28 +191,26 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             Guided by <em>experience and expertise</em>
           </h2>
         </div>
-        <div className="advisory-grid">
+        <div className="flex flex-col md:flex-row gap-8 mt-12 justify-center">
           {[
             {
-              name: "Advisory Board Member",
+              name: "Prof Marisa",
               title: "Health Systems | West Africa",
+              image: "/board/Prof Marisa.png", 
               bio: "Senior figure in health systems strengthening, with 20+ years advising governments and development agencies across Sub-Saharan Africa.",
             },
             {
-              name: "Advisory Board Member",
+              name: "Mary ",
               title: "Corporate Leadership | East Africa",
+              image: "/board/Mary FAPH.png", 
               bio: "Former CEO of a major East African conglomerate, with expertise in organisational transformation and leadership development at scale.",
-            },
-            {
-              name: "Advisory Board Member",
-              title: "Academic & Policy | Global",
-              bio: "Professor of Education Policy with extensive research and advisory experience across African university systems and skills development policy.",
-            },
+            }
           ].map((a, i) => (
-            <div className="advisor-card" key={i}>
+            <div className="advisor-card max-w-sm" key={i}>
               <div className="advisor-photo">
                 <Image
                   src="https://images.unsplash.com/photo-1613876215075-276fd62c89a4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  // src={a.image || ""}
                   alt={`${a.name} photo`}
                   fill
                   style={{ objectFit: 'cover', borderRadius: '6px' }}
@@ -197,7 +220,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               <div className="advisor-info">
                 <div className="advisor-name">{a.name}</div>
                 <div className="advisor-title">{a.title}</div>
-                <div className="advisor-bio">{a.bio}</div>
+                {/* <div className="advisor-bio">{a.bio}</div> */}
               </div>
             </div>
           ))}
