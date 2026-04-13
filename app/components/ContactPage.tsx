@@ -34,7 +34,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
           message: (e.target as HTMLFormElement).message.value,
         }),
       });
-      alert('Your enquiry has been sent. We will follow up within 3 working days.');
+      alert('Your enquiry has been sent. We will get back to your soon.');
       (e.target as HTMLFormElement).reset();
     } catch (error) {
       console.error('Error sending enquiry:', error);
