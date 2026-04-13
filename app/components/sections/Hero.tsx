@@ -59,7 +59,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
   return (
     <div
-      className="relative w-full hero-bg"
+      className="relative w-full hero-bg pt-16 md:pt-24 lg:pt-32"
       style={{
         backgroundImage: "url(/hero-image2.png)",
         backgroundRepeat: "no-repeat",
@@ -82,7 +82,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <div className="hero-eyebrow">
               Workforce Solutions | Leadership & Organisational Development
             </div>
-            <h1 className="text-white">
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Building <br />
               the health systems <br />
               Africa <br />
@@ -96,14 +96,14 @@ export default function Hero({ onNavigate }: HeroProps) {
               build capability, raise professional standards and create genuine
               career pathways across Africa.
             </p>
-            <div className="hero-actions">
-              <Link target="_blank" href="https://learn.oakvaleltd.com">
-                <button className="btn-primary">
+            <div className="hero-actions  w-full md:w-auto">
+              <Link target="_blank" href="https://learn.oakvaleltd.com" className="w-full">
+                <button className="btn-primary w-full md:w-auto">
                   Train Your Care Workforce
                 </button>
               </Link>
-              <Link target="_blank" href="https://jobs.oakvaleltd.com">
-                <button className="btn-ghost">Hire Certified Care Staff</button>
+              <Link target="_blank" href="https://jobs.oakvaleltd.com" className="w-full">
+                <button className="btn-ghost w-full md:w-auto">Hire Certified Care Staff</button>
               </Link>
             </div>
           </div>

@@ -115,7 +115,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
           <div className="section-label" style={{ color: "var(--mint)" }}>
             What We Do
           </div>
-          <h1>
+         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Three disciplines.{" "}
             <em style={{ color: "var(--mint)", fontStyle: "italic" }}>
               One integrated approach.

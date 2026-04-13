@@ -34,7 +34,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           <div className="section-label" style={{ color: "var(--mint)" }}>
             About Oakvale Learning
           </div>
-          <h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             We exist to change lives through{" "}<br/>
             <em style={{ fontStyle: "italic", color: "var(--mint)" }}>
               learning and self-discovery.

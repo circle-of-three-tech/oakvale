@@ -134,7 +134,7 @@ nav {
 .hero-content { padding: 0; position: relative; z-index: 2; max-width: 800px;}
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--gold-light); font-size: clamp(0.65rem, 2vw, 0.78rem); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.8rem; }
 /* .hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--gold-light); } */
-.hero h1 { font-family: var(--font-body); text-transform: capitalize; font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 700; line-height: 1.12; margin-bottom: 1.6rem; }
+.hero h1 { font-family: var(--font-body); text-transform: capitalize; font-weight: 700; line-height: 1.12; margin-bottom: 1.6rem; }
 .hero h1 em { font-style: italic; color: var(--gold-light); }
 .hero-sub { color: rgba(223, 223, 223, 0.774); font-size: clamp(0.9rem, 2.5vw, 1.05rem); max-width: 480px; line-height: 1.7; margin-bottom: 2.8rem; font-weight: 300; }
 .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
@@ -282,7 +282,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
 
 .about-hero { background: var(--forest); padding: 12rem 8% 6rem; color: #fff; width: 100%; max-width: none; }
 .about-hero-inner { max-width: 1100px; margin: 0 auto; padding: 1rem 0; }
-.about-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; }
+.about-hero h1 { font-family: 'Cormorant Garamond', serif;  font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; }
 .about-hero p { color: rgba(255,255,255,0.65); font-size: clamp(0.9rem, 2.3vw, 1.05rem); line-height: 1.75; font-weight: 300; }
 
 .people { padding: 5rem 8%; background: var(--warm-white); width: 100%; max-width: none; }
@@ -508,8 +508,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
     padding: 0;
   }
   
-  .hero h1 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  .hero h1 { 
     margin-bottom: 1rem;
   }
   
@@ -645,12 +644,10 @@ footer > * { max-width: 1100px; margin: 0 auto; }
   }
   
   /* ---- ABOUT PAGE ---- */
-  .about-hero { padding: 8rem 4% 4rem; }
-  .about-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .about-hero { padding: 8rem 4% 4rem; } 
   .about-hero p { font-size: 0.95rem; }
   
-  .services-hero { padding: 8rem 4% 4rem; }
-  .services-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .services-hero { padding: 8rem 4% 4rem; } 
   
   .contact-hero { padding: 8rem 4% 3rem; }
   .contact-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
@@ -781,8 +778,7 @@ footer > * { max-width: 1100px; margin: 0 auto; }
   .nav-logo { font-size: 0.6rem; }
   .nav-logo img { height: 1.2rem; }
   
-  .hero { padding-top: 50px; padding-bottom: 1rem; }
-  .hero h1 { font-size: clamp(1.6rem, 3.5vw, 2rem); }
+  .hero { padding-top: 50px; padding-bottom: 1rem; } 
   
   section, .mission-strip, .approach, .cta, footer, .about-hero, .services-hero, .contact-hero {
     padding: 2rem 3% !important;
