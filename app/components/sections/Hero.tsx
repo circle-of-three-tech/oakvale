@@ -82,7 +82,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <div className="hero-eyebrow">
               Workforce Solutions | Leadership & Organisational Development
             </div>
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl leading-tight">
               Building <br />
               the health systems <br />
               Africa <br />
