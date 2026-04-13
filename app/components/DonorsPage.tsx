@@ -63,6 +63,7 @@ export default function DonorsPage({ onNavigate }: DonorsPageProps) {
 
       <div className="client-services">
         <h2>What we do for <em>donor-funded programmes</em></h2>
+        <br/>
         <div className="client-svc-grid">
           {[
             { title: 'Workforce Development Programme Design', body: 'End-to-end design of workforce development programmes for grant-funded contexts, from training needs analysis through to delivery and evaluation. Built for the bandwidth, capacity and beneficiary realities of your operating context.' },

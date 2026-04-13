@@ -59,7 +59,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
   return (
     <div
-      className="relative w-full hero-bg pt-16 md:pt-24 lg:pt-32"
+      className="relative w-full hero-bg pt-16 md:pt-20"
       style={{
         backgroundImage: "url(/hero-image2.png)",
         backgroundRepeat: "no-repeat",

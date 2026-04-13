@@ -61,6 +61,7 @@ export default function GovernmentPage({ onNavigate }: GovernmentPageProps) {
 
       <div className="client-services">
         <h2>What we do for <em>government</em></h2>
+        <br/>
         <div className="client-svc-grid">
           {[
             { title: 'Health Workforce Strengthening', body: 'Our foundational expertise. We design and deliver workforce development for health systems at every level — from community health workers and frontline clinicians through to health managers, administrators and health ministry officials.' },

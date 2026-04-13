@@ -63,6 +63,7 @@ export default function AcademicPage({ onNavigate }: AcademicPageProps) {
 
       <div className="client-services">
         <h2>What we do for <em>academic institutions</em></h2>
+        <br/>
         <div className="client-svc-grid">
           {[
             { title: 'Curriculum Review & Redesign', body: 'We review existing programmes against international benchmarks and African labour market needs, then work with your faculty to redesign modules, assessments and learning outcomes.' },

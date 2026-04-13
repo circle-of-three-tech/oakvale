@@ -37,7 +37,7 @@ export default function CorporatesPage({ onNavigate }: CorporatesPageProps) {
           <div className="section-label" style={{ color: "var(--mint)" }}>
             For Corporates
           </div>
-          <h1>
+           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl leading-tight">
             Building capability from <em>the inside out.</em>
           </h1>
           <p>
@@ -102,6 +102,7 @@ export default function CorporatesPage({ onNavigate }: CorporatesPageProps) {
         <h2>
           What we do for <em>corporates</em>
         </h2>
+        <br/>
         <div className="client-svc-grid">
           {[
             {
