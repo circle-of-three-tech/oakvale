@@ -99,12 +99,12 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           <div 
           className="about-story-image" 
           style={{
-            flex: "0 1 355px", 
+            flex: "0 1 400px", 
             width: "100%", 
-            height: "100%",  
             minHeight: "400px", 
-            background: "url(/WATERMARK.png) no-repeat right/cover",
-            opacity: 0.1,
+            height: "100%", 
+            borderRadius: "8px", 
+            background: "url(/WATERMARK2.png) no-repeat left/cover"
             }}>
           </div>
         </div>
