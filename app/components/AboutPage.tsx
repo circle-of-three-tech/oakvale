@@ -160,7 +160,21 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               title: "Quality Assurance Lead",
                image: '/team/Dr Sarah.png',
               bio: "",
-            }
+            },
+            {
+              initials: "SA",
+              name: "Prince Davis",
+              title: "Graphics Designer",
+               image: '/team/Prince.png',
+              bio: "",
+            },
+            //  {
+            //   initials: "SA",
+            //   name: "Victor ",
+            //   title: "Graphics Designer",
+            //    image: '/team/Victor.png',
+            //   bio: "",
+            // }
           ].map((p, i) => (
             <div className="person-card" key={i}>
               <div className="person-photo">
@@ -194,23 +208,24 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="flex flex-col md:flex-row gap-8 mt-12 justify-center">
           {[
             {
-              name: "Prof Marisa",
-              title: "Health Systems | West Africa",
+              name: "Prof Marisa Miraldo",
+              title: "Professor of Health Economics & Health Policy",
               image: "/board/Prof Marisa.png", 
-              bio: "Senior figure in health systems strengthening, with 20+ years advising governments and development agencies across Sub-Saharan Africa.",
+              bio: `A Professor of Health Economics and Health Policy at Imperial College Business School, where she serves as Co-Director of the Centre for Health Policy and Co-Director of the School of Convergence Science in Health and Technology. She is the Academic Director of the MSc in International Health Management and a Fellow of Imperial's Data Science Institute. Her research spans the economics of healthcare innovation, the impact of policy on organisational performance, and the behavioural determinants of health decision-making. 
+                  A member of the World Economic Forum's Expert Network on the Future of Health and Healthcare, Professor Miraldo brings world-class health economics expertise and a direct understanding of the Nigerian health system context to the Oakvale Advisory Board.`,
             },
             {
-              name: "Mary ",
-              title: "Corporate Leadership | East Africa",
+              name: "Mary Akangbe",
+              title: "Specialist Practitioner in Invasive Surgery & Robotics",
               image: "/board/Mary FAPH.png", 
-              bio: "Former CEO of a major East African conglomerate, with expertise in organisational transformation and leadership development at scale.",
+              bio: "A Specialist Practitioner in Minimally Invasive Surgery and Robotics at King's College Hospital NHS Foundation Trust, with over three decades of clinical practice. She is Founder and President of Zenith Global Health, through which she leads one of Africa's most prominent health leadership platforms - the Africa Healthcare Awards and Summit - and the Not Just a Nurse initiative, a training and mentoring hub supporting nurses and allied health professionals in career development, entrepreneurship, and professional progression. A Fellow of the Association of Public Health, Mary brings extensive networks across health institutions in the UK and Africa and a practitioner's authority on the workforce development and leadership challenges that sit at the heart of Oakvale's mission.",
             }
           ].map((a, i) => (
             <div className="advisor-card max-w-sm" key={i}>
               <div className="advisor-photo">
                 <Image
-                  src="https://images.unsplash.com/photo-1613876215075-276fd62c89a4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  // src={a.image || ""}
+                  // src="https://images.unsplash.com/photo-1613876215075-276fd62c89a4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src={a.image || ""}
                   alt={`${a.name} photo`}
                   fill
                   style={{ objectFit: 'cover', borderRadius: '6px' }}
@@ -220,7 +235,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               <div className="advisor-info">
                 <div className="advisor-name">{a.name}</div>
                 <div className="advisor-title">{a.title}</div>
-                {/* <div className="advisor-bio">{a.bio}</div> */}
+                <div className="advisor-bio">{a.bio}</div>
               </div>
             </div>
           ))}
