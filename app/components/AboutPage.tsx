@@ -103,8 +103,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             width: "100%", 
             minHeight: "640px", 
             height: "100%", 
-            // borderRadius: "8px", 
-            // background: "url(/logo_dark.png) no-repeat left/cover"
+            borderRadius: "8px", 
+            background: "url(/WATERMARK.png) no-repeat left/contain"
             }}>
           </div>
         </div>
